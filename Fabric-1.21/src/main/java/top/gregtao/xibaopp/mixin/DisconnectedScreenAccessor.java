@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(DisconnectedScreen.class)
 public interface DisconnectedScreenAccessor {
 
-    @Accessor("i")
+    @Accessor("getNarrationMessage")
     Component getReason();
-
 }
+
