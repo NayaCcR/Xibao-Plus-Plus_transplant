@@ -1,5 +1,5 @@
 plugins {
-    id 'net.fabricmc.loom' version '1.7.64'
+    id 'fabric-loom' version '1.+' apply(false)
     id 'maven-publish'
 }
 
@@ -26,16 +26,12 @@ subprojects {
         }
     }
 
-    apply plugin: 'net.fabricmc.loom' // 保持与主项目一致的Loom插件配置
+    apply plugin: 'fabric-loom'
 
     archivesBaseName = project(':').archives_base_name
     setVersion(project.mod_version)
 
     repositories {
-        maven {
-            url "https://maven.fabricmc.net/"
-        }
-        mavenCentral()
     }
 
     dependencies {
